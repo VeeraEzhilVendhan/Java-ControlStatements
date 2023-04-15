@@ -23,6 +23,9 @@ public class ForLoops {
 		//labeled loop
 		System.out.println("---- Infinite Loop example ----");
 		infiniteLoop();
+		
+		System.out.println("---- Continue statement example ----");
+		continueStatement();
 	}
 
 	private static void simpleLoop() {
@@ -69,6 +72,17 @@ public class ForLoops {
 		System.out.println("infinite loop starts ctrl+c to stop the loop");
 		for(;;) {
 			System.out.println("Hi");
+		}
+	}
+	
+	private static void continueStatement() {
+		for(int i=0;i<6;i++) {
+			if(i==4) {
+				System.out.println("reached for 4 - applying continue");
+				continue;
+				//System.out.println("statements after continue");
+			}
+			System.out.println(i);
 		}
 	}
 }
